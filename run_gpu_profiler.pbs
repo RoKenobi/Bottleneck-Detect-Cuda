@@ -1,0 +1,50 @@
+#!/bin/bash
+#PBS -N gpu_profiler
+#PBS -l select=1:ncpus=16:ngpus=1:mem=110GB
+#PBS -l walltime=00:45:00
+#PBS -q normal
+#PBS -P personal-rohan023 
+
+# Load environments
+module load cuda/12.2.2
+module load miniforge3
+conda activate test_ai_amd
+
+# Go to your project folder
+cd $PBS_O_WORKDIR
+
+# Ensure logs directory exists
+mkdir -p logs
+
+# Start pure-bash telemetry logger in the background
+nvidia-smi --query-gpu=timestamp,utilization.gpu,temperature.gpu,memory.used --format=csv -l 1 > logs/gpu_telemetry.csv &
+LOGGER_PID=$!# --- SECTION 1: EFFICIENT KERNELS ---
+
+echo "Profiling Matrix Multiplication..."
+nsys profile -t cuda -o results/matmul_report -f true ./results/matrix_mul
+
+echo "Profiling Vector Add..."
+nsys profile -t cuda -o results/vector_add_report -f true ./results/vector_add
+
+echo "Profiling Convolution (Constant Memory test)..."
+nsys profile -t cuda -o results/convolution_report -f true ./results/convolution
+
+# --- SECTION 2: ARCHITECTURE STRESS TESTS ---
+
+echo "Profiling Reduction (Warp Sync test)..."
+nsys profile -t cuda -o results/reduction_report -f true ./results/reduction
+
+echo "Profiling Histogram (Atomic Contention test)..."
+nsys profile -t cuda -o results/histogram_report -f true ./results/histogram
+
+# --- SECTION 3: INEFFICIENT KERNELS ---
+
+echo "Profiling Uncoalesced Memory (Memory Bottleneck)..."
+nsys profile -t cuda -o results/uncoalesced_report -f true ./results/uncoalesced
+
+echo "Profiling Warp Divergence (Logic Bottleneck)..."
+nsys profile -t cuda -o results/warp_divergence_report -f true ./results/warp_divergence
+
+# Stop the telemetry logger
+kill $LOGGER_PID
+echo "Profiling complete. All 7 reports generated in results/ directory."

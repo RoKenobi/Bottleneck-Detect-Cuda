@@ -1,0 +1,2 @@
+/var/spool/pbs/mom_priv/jobs/13092886.pbs101.SC: line 21: ---: command not found
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]

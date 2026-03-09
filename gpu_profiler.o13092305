@@ -1,0 +1,49 @@
+Profiling Matrix Multiplication...
+Launching Matrix Multiplication 100 times...
+Matrix Mul Result sample: 16384.000000
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-bf1f.qdstrm'
+[1/1] [0%                          ] matmul_report.nsys-rep[1/1] [0%                          ] matmul_report.nsys-rep[1/1] [========42%                 ] matmul_report.nsys-rep[1/1] [===========51%              ] matmul_report.nsys-rep[1/1] [============55%             ] matmul_report.nsys-rep[1/1] [=============58%            ] matmul_report.nsys-rep[1/1] [==============61%           ] matmul_report.nsys-rep[1/1] [==============64%           ] matmul_report.nsys-rep[1/1] [================68%         ] matmul_report.nsys-rep[1/1] [================71%         ] matmul_report.nsys-rep[1/1] [=================74%        ] matmul_report.nsys-rep[1/1] [==================77%       ] matmul_report.nsys-rep[1/1] [===================80%      ] matmul_report.nsys-rep[1/1] [====================84%     ] matmul_report.nsys-rep[1/1] [=====================87%    ] matmul_report.nsys-rep[1/1] [======================90%   ] matmul_report.nsys-rep[1/1] [=======================93%  ] matmul_report.nsys-rep[1/1] [========================97% ] matmul_report.nsys-rep[1/1] [========================99% ] matmul_report.nsys-rep[1/1] [========================100%] matmul_report.nsys-rep[1/1] [========================100%] matmul_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/matmul_report.nsys-rep
+Profiling Vector Add...
+Allocating 1073741824 bytes per array...
+Launching Vector Add 500 times...
+Result sample: 3.000000
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-c2c6.qdstrm'
+[1/1] [0%                          ] vector_add_report.nsys-rep[1/1] [0%                          ] vector_add_report.nsys-rep[1/1] [13%                         ] vector_add_report.nsys-rep[1/1] [========40%                 ] vector_add_report.nsys-rep[1/1] [============54%             ] vector_add_report.nsys-rep[1/1] [================68%         ] vector_add_report.nsys-rep[1/1] [=================74%        ] vector_add_report.nsys-rep[1/1] [==================75%       ] vector_add_report.nsys-rep[1/1] [=======================95%  ] vector_add_report.nsys-rep[1/1] [========================100%] vector_add_report.nsys-rep[1/1] [========================100%] vector_add_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/vector_add_report.nsys-rep
+Profiling Convolution (Constant Memory test)...
+Launching Convolution 500 times...
+Convolution Result sample: 9.000000
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-6c99.qdstrm'
+[1/1] [0%                          ] convolution_report.nsys-rep[1/1] [0%                          ] convolution_report.nsys-rep[1/1] [=15%                        ] convolution_report.nsys-rep[1/1] [=======38%                  ] convolution_report.nsys-rep[1/1] [============54%             ] convolution_report.nsys-rep[1/1] [================71%         ] convolution_report.nsys-rep[1/1] [==================76%       ] convolution_report.nsys-rep[1/1] [==================77%       ] convolution_report.nsys-rep[1/1] [=======================94%  ] convolution_report.nsys-rep[1/1] [========================100%] convolution_report.nsys-rep[1/1] [========================100%] convolution_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/convolution_report.nsys-rep
+Profiling Reduction (Warp Sync test)...
+Launching Reduction 500 times...
+Reduction Block 0 Sum: 256.000000
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-4ac6.qdstrm'
+[1/1] [0%                          ] reduction_report.nsys-rep[1/1] [0%                          ] reduction_report.nsys-rep[1/1] [10%                         ] reduction_report.nsys-rep[1/1] [===22%                      ] reduction_report.nsys-rep[1/1] [======33%                   ] reduction_report.nsys-rep[1/1] [===============65%          ] reduction_report.nsys-rep[1/1] [================68%         ] reduction_report.nsys-rep[1/1] [================69%         ] reduction_report.nsys-rep[1/1] [=======================96%  ] reduction_report.nsys-rep[1/1] [========================100%] reduction_report.nsys-rep[1/1] [========================100%] reduction_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/reduction_report.nsys-rep
+Profiling Histogram (Atomic Contention test)...
+Launching Histogram 500 times...
+Histogram Bin 10 count: 524288000
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-14a6.qdstrm'
+[1/1] [0%                          ] histogram_report.nsys-rep[1/1] [0%                          ] histogram_report.nsys-rep[1/1] [5%                          ] histogram_report.nsys-rep[1/1] [11%                         ] histogram_report.nsys-rep[1/1] [=17%                        ] histogram_report.nsys-rep[1/1] [============57%             ] histogram_report.nsys-rep[1/1] [=============58%            ] histogram_report.nsys-rep[1/1] [=============60%            ] histogram_report.nsys-rep[1/1] [==================78%       ] histogram_report.nsys-rep[1/1] [=======================96%  ] histogram_report.nsys-rep[1/1] [========================98% ] histogram_report.nsys-rep[1/1] [========================100%] histogram_report.nsys-rep[1/1] [========================100%] histogram_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/histogram_report.nsys-rep
+Profiling Uncoalesced Memory (Memory Bottleneck)...
+Launching Uncoalesced Memory 500 times...
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-1b67.qdstrm'
+[1/1] [0%                          ] uncoalesced_report.nsys-rep[1/1] [0%                          ] uncoalesced_report.nsys-rep[1/1] [=15%                        ] uncoalesced_report.nsys-rep[1/1] [=====32%                    ] uncoalesced_report.nsys-rep[1/1] [============57%             ] uncoalesced_report.nsys-rep[1/1] [===================82%      ] uncoalesced_report.nsys-rep[1/1] [====================83%     ] uncoalesced_report.nsys-rep[1/1] [====================84%     ] uncoalesced_report.nsys-rep[1/1] [=====================87%    ] uncoalesced_report.nsys-rep[1/1] [========================99% ] uncoalesced_report.nsys-rep[1/1] [========================100%] uncoalesced_report.nsys-rep[1/1] [========================100%] uncoalesced_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/uncoalesced_report.nsys-rep
+Profiling Warp Divergence (Logic Bottleneck)...
+Launching Warp Divergence 500 times...
+Generating '/var/tmp/pbs.13092305.pbs101/nsys-report-21a1.qdstrm'
+[1/1] [0%                          ] warp_divergence_report.nsys-rep[1/1] [0%                          ] warp_divergence_report.nsys-rep[1/1] [==19%                       ] warp_divergence_report.nsys-rep[1/1] [=======36%                  ] warp_divergence_report.nsys-rep[1/1] [============55%             ] warp_divergence_report.nsys-rep[1/1] [=================74%        ] warp_divergence_report.nsys-rep[1/1] [==================75%       ] warp_divergence_report.nsys-rep[1/1] [==================76%       ] warp_divergence_report.nsys-rep[1/1] [=======================93%  ] warp_divergence_report.nsys-rep[1/1] [========================100%] warp_divergence_report.nsys-rep[1/1] [========================100%] warp_divergence_report.nsys-rep
+Generated:
+    /home/users/ntu/rohan023/AMDProjects/gpu_profiler/results/warp_divergence_report.nsys-rep
+Profiling complete. All 7 reports generated in results/ directory.
